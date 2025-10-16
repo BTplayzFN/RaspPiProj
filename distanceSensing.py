@@ -5,6 +5,8 @@ Echo = 27
 Trigger = 17
   
 sensor = DistanceSensor(echo = Echo, trigger = Trigger)
+
+#this will be imported by the main function or something along those lines to determine whether to run or not
 def objectClose(threshold = 60):
     try:
       while True:
