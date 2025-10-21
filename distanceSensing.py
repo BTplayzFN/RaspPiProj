@@ -12,10 +12,10 @@ def objectClose(threshold = 60):
       while True:
         cmDistance = sensor.distance * 100
         if cmDistance < threshold:
-          return True
+          yield True 
         else:
-          return False
-          sleep(0.1)
+          yield False
+        sleep(0.1)
     # this except gotta be changed to the button or whatever we want it to be
     except KeyboardInterrupt:
-      return False
+      return 
